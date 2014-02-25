@@ -1,4 +1,7 @@
 Papa::Application.routes.draw do
+  resources :children
+
+
   resources :fathers
 
 
