@@ -1,8 +1,8 @@
 Papa::Application.routes.draw do
-  resources :children
+ resources :fathers do
+   resources :babies
+ end
 
-
-  resources :fathers
 
 
   # The priority is based upon order of creation:
