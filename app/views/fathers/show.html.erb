@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h2>Father</h2>
 <p>
   <b>Name:</b>
   <%= @father.name %>
@@ -20,6 +20,27 @@
   <%= @father.age %>
 </p>
 
+<h2>Babies</h2>
+<% @father.babies.each do | baby | %>
+ 
+ <p>
+  <b>Name:</b>
+  <%= baby.name %>
+
+<%= link_to 'Destroy Baby', [baby.father, baby],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+
+
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= baby.age %>
+</p>
+
+
+ <% end %>
 
 <%= link_to 'Edit', edit_father_path(@father) %> |
 <%= link_to 'Back', fathers_path %>

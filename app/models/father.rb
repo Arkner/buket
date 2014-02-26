@@ -5,6 +5,6 @@ class Father < ActiveRecord::Base
  validates :age, numericality: { less_than: 150 }
 
 attr_accessible :age, :name, :surname, :job
-has_many :child 
+has_many :babies
 end
 

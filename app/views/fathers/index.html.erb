@@ -17,6 +17,7 @@
     <td><%= father.surname %></td>
     <td><%= father.age %></td>
     <td><%= father.job %></td>
+    <td><%= link_to 'Create', new_father_baby_path(father)  %></td>
     <td><%= link_to 'Show', father %></td>
     <td><%= link_to 'Edit', edit_father_path(father) %></td>
     <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,4 +1,4 @@
-<%= form_for(@baby) do |f| %>
+<%= form_for @baby, :url => { :controller => :babies, :action => :create } do |f| %>
   <% if @baby.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@baby.errors.count, "error") %> prohibited this baby from being saved:</h2>
@@ -16,16 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
     <%= f.label :age %><br />
     <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :father %><br />
-    <%= f.text_field :father %>
   </div>
   <div class="actions">
     <%= f.submit %>

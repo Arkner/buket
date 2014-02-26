@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140226120051) do
+ActiveRecord::Schema.define(:version => 20140226121129) do
 
   create_table "babies", :force => true do |t|
     t.string   "name"
-    t.string   "surname"
     t.integer  "age"
     t.integer  "father_id"
     t.datetime "created_at", :null => false
