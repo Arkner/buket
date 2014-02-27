@@ -1,0 +1,51 @@
+<h2>Страничка результ</h2>
+
+<table>
+<tr>
+<th>Сумарный возраст</th>
+<td><%= Father.sum("age") %></td>
+</tr>
+<tr>
+<th>Кол-во отцов</th>
+<td><%= Father.count %></td>
+</table>
+<h2>Отцы страше 30</h2>
+<% Father.where('age > 30').each do |father| %>
+<table>
+
+
+  
+<table>
+<tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+    <th>Job</th>
+  		<tr>
+    <td><%= father.name %></td>
+    <td><%= father.surname %></td>
+    <td><%= father.age %></td>
+    <td><%= father.job %></td>
+   		</tr>
+</tr>   
+</table>
+<%end%>
+
+<h2>Дети отцов младше</h2>
+<% Father.where('age < 30').each do | father | %>
+<% father.babies.each do |baby| %>
+<table>
+<tr>
+    <th>Name        </th>
+    <th>Age         </th>
+  		<tr>
+    <td><%= baby.name %></td>
+    <td><%= baby.age %></td>
+   		</tr>
+</tr>   
+</table>
+<%end%>
+<%end%>
+
+
+

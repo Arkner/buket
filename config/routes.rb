@@ -2,7 +2,7 @@ Papa::Application.routes.draw do
  resources :fathers do
    resources :babies
  end
-
+ get 'result', :to=>"fathers#result"
 
 
   # The priority is based upon order of creation:
