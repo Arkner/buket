@@ -1,11 +1,11 @@
-<h1>Listing fathers</h1>
+<h1>Букеты</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Age</th>
-    <th>Job</th>
+    <th>Название цветка</th>
+    <th>Стоимость цветка</th>
+    <th>Количество цветов</th>
+    <th>Стоимость букета</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,19 +13,19 @@
 
 <% @fathers.each do |father| %>
   <tr>
-    <td><%= father.name %></td>
-    <td><%= father.surname %></td>
-    <td><%= father.age %></td>
-    <td><%= father.job %></td>
-    <td><%= link_to 'Create', new_father_baby_path(father)  %></td>
+    <td><%= father.name %></td> <%#Название цветка%>
+    <td><%= father.surname %></td> <%#Стоимость одной штуки%>
+    <td><%= father.job %></td> <%#Количество цветов%>
+    <td><%= father.age %></td> <%#Стоимость букета%>
     <td><%= link_to 'Show', father %></td>
     <td><%= link_to 'Edit', edit_father_path(father) %></td>
     <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>Здесь будет написано о том</td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Father', new_father_path %>
+<%= link_to 'Новый букет', new_father_path %>
 

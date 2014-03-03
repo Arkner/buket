@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
-<h2>Father</h2>
+<h2>Букет</h2>
 <p>
-  <b>Name:</b>
+  <b>Название цветка:</b>
   <%= @father.name %>
 </p>
 
 <p>
-  <b>Surname:</b>
+  <b>Стоимость одного цветка:</b>
   <%= @father.surname %>
 </p>
 
 <p>
-  <b>Job:</b>
+  <b>Количество цветов:</b>
   <%= @father.job %>
 </p>
 
 <p>
-  <b>Age:</b>
+  <b>Стоимость букета:</b>
   <%= @father.age %>
 </p>
 
-<h2>Babies</h2>
+<!--<h2>Babies</h2>
 <% @father.babies.each do | baby | %>
  
  <p>
@@ -41,6 +41,6 @@
 
 
  <% end %>
-
+-->
 <%= link_to 'Edit', edit_father_path(@father) %> |
 <%= link_to 'Back', fathers_path %>
