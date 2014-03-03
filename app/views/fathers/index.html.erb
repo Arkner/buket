@@ -16,11 +16,10 @@
     <td><%= father.name %></td> <%#Название цветка%>
     <td><%= father.surname %></td> <%#Стоимость одной штуки%>
     <td><%= father.job %></td> <%#Количество цветов%>
-    <td><%= father.age %></td> <%#Стоимость букета%>
+    <td><%= father.sum %></td> <%#Стоимость букета%>
     <td><%= link_to 'Show', father %></td>
     <td><%= link_to 'Edit', edit_father_path(father) %></td>
     <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td>Здесь будет написано о том</td>
   </tr>
 <% end %>
 </table>

@@ -78,6 +78,13 @@ class FathersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to fathers_url }
       format.json { head :no_content }
+
+def fv ()
+ return surname * job 
+end
+
+
+
     end
   end
 end

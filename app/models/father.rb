@@ -6,5 +6,11 @@ class Father < ActiveRecord::Base
 
 attr_accessible :age, :name, :surname, :job
 has_many :babies
+
+
+def sum ()
+  surname * job 
+end
+
 end
 
