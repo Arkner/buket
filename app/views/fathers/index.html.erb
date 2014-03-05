@@ -16,10 +16,26 @@
     <td><%= father.name %></td> <%#Название цветка%>
     <td><%= father.surname %></td> <%#Стоимость одной штуки%>
     <td><%= father.job %></td> <%#Количество цветов%>
-    <td><%= father.sum %></td> <%#Стоимость букета%>
+    <td id = "sum_<%= bouquet.id %>"><%= father.sum %></td> <%#Стоимость букета%>
+
+<td><button class= "btn btn-success" id="b1_<%= bouquet.id %>" type="button">Суд букетов</button>
+      <script>
+        document.getElementById('b1_<%= bouquet.id %>').onclick = function() {
+          if ($("#sum_<%= bouquet.id %>").html() > 100) {
+          alert("Good bouquet")
+          } else {
+          alert("Bad bouquet")
+          }
+        }
+      </script>
+
     <td><%= link_to 'Show', father %></td>
     <td><%= link_to 'Edit', edit_father_path(father) %></td>
     <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+
+
+    </td>
   </tr>
 <% end %>
 </table>
