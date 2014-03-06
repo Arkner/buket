@@ -1,6 +1,7 @@
-<h1>Букеты</h1>
 
-<table>
+ <%= stylesheet_link_tag "style" %>
+<h1>Букеты</h1>
+<table class = "table">
   <tr>
     <th>Название цветка</th>
     <th>Стоимость цветка</th>
@@ -16,12 +17,12 @@
     <td><%= father.name %></td> <%#Название цветка%>
     <td><%= father.surname %></td> <%#Стоимость одной штуки%>
     <td><%= father.job %></td> <%#Количество цветов%>
-    <td id = "sum_<%= bouquet.id %>"><%= father.sum %></td> <%#Стоимость букета%>
+    <td id = "sum_<%= father.id %>"><%= father.sum %></td> <%#Стоимость букета%>
 
-<td><button class= "btn btn-success" id="b1_<%= bouquet.id %>" type="button">Суд букетов</button>
+<td><button class= "btn btn-success" id="b1_<%= father.id %>" type="button">Суд букетов</button>
       <script>
-        document.getElementById('b1_<%= bouquet.id %>').onclick = function() {
-          if ($("#sum_<%= bouquet.id %>").html() > 100) {
+        document.getElementById('b1_<%= father.id %>').onclick = function() {
+          if ($("#sum_<%= father.id %>").html() > 100) {
           alert("Good bouquet")
           } else {
           alert("Bad bouquet")
