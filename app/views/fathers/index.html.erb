@@ -1,47 +1,7 @@
-
- <%= stylesheet_link_tag "style" %>
 <h1>Букеты</h1>
-<table class = "table">
-  <tr>
-    <th>Название цветка</th>
-    <th>Стоимость цветка</th>
-    <th>Количество цветов</th>
-    <th>Стоимость букета</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @fathers.each do |father| %>
-  <tr>
-    <td><%= father.name %></td> <%#Название цветка%>
-    <td><%= father.surname %></td> <%#Стоимость одной штуки%>
-    <td><%= father.job %></td> <%#Количество цветов%>
-    <td id = "sum_<%= father.id %>"><%= father.sum %></td> <%#Стоимость букета%>
-
-<td><button class= "btn btn-success" id="b1_<%= father.id %>" type="button">Суд букетов</button>
-      <script>
-        document.getElementById('b1_<%= father.id %>').onclick = function() {
-          if ($("#sum_<%= father.id %>").html() > 100) {
-          alert("Good bouquet")
-          } else {
-          alert("Bad bouquet")
-          }
-        }
-      </script>
-
-    <td><%= link_to 'Show', father %></td>
-    <td><%= link_to 'Edit', edit_father_path(father) %></td>
-    <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td>
-
-
-    </td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'Новый букет', new_father_path %>
-
+<div id ="buket">
+<div id ="part">
+<%= render 'part' %>
+</div>
+<%= link_to 'Новый букет', new_father_path, :class => "btn btn-warning" %>
+</div>

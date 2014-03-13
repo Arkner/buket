@@ -1,0 +1,1 @@
+ $("#part").html("<%= escape_javascript(render :partial => 'part')%>");
