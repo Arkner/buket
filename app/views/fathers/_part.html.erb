@@ -10,13 +10,12 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @fathers.each do |father| %>
   <tr>
     <td><%= father.name %></td> <%#Название цветка%>
     <td><%= father.surname %></td> <%#Стоимость одной штуки%>
     <td><%= father.job %></td> <%#Количество цветов%>
-    <td id = "sum_<%= father.id %>"><%= father.sum %></td> <%#Стоимость букета%>
+    <td id = "sum_<%= father.id %>"><%= father.sum() %></td> <%#Стоимость букета%>
 
 <td><button class= "btn btn-success" id="b1_<%= father.id %>" type="button">Суд букетов</button>
       <script>

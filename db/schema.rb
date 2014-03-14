@@ -11,27 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140304081733) do
-
-  create_table "babies", :force => true do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.integer  "father_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "babies", ["father_id"], :name => "index_babies_on_father_id"
-
-  create_table "children", :force => true do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20140314125716) do
 
   create_table "fathers", :force => true do |t|
     t.string   "name"
+    t.integer  "age"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "job"

@@ -22,28 +22,6 @@
   <b>Стоимость букета:</b>
   <%=@father.sum %>
 </p>
-<!--<h2>Babies</h2>
-<% @father.babies.each do | baby | %>
- 
- <p>
-  <b>Name:</b>
-  <%= baby.name %>
-
-<%= link_to 'Destroy Baby', [baby.father, baby],
-               :confirm => 'Are you sure?',
-               :method => :delete %>
-
-
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= baby.age %>
-</p>
-
-
- <% end %>
--->
 <%= link_to 'Edit', edit_father_path(@father),  :class => "btn btn-info" %> 
 <%= link_to 'Back', fathers_path, :class=> "btn btn-success" %>
 </div>
