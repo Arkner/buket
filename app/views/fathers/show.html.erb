@@ -1,4 +1,6 @@
+ <div class ="margin_left">
  <%= stylesheet_link_tag "style" %>
+<%= stylesheet_link_tag "bouquet.css" %>
 <p id="notice"><%= notice %></p>
 <h2>Букет</h2>
 <p>
@@ -42,5 +44,6 @@
 
  <% end %>
 -->
-<%= link_to 'Edit', edit_father_path(@father) %> |
-<%= link_to 'Back', fathers_path %>
+<%= link_to 'Edit', edit_father_path(@father),  :class => "btn btn-info" %> 
+<%= link_to 'Back', fathers_path, :class=> "btn btn-success" %>
+</div>
